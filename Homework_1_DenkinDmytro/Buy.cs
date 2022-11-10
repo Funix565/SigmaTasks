@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Homework_1_DenkinDmytro
-{
+{// Покупка може містити кілька Product. Чому, коли Ви можете міняти будь-коли Product зміна кількості можлива тільки через конструктор?
     public class Buy
     {
 		private Product _product;
