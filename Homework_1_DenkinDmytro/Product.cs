@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework_1_DenkinDmytro
 {
+	// TODO: Додати перевірку даних в `set` -- ціна, вага
     public class Product
     {
 		// protected -- for future children to inherit

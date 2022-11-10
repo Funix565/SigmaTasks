@@ -18,24 +18,26 @@ namespace Homework_1_DenkinDmytro
 			get { return _quantity; }
 		}
 
-		public Product Product
+        // TODO: Щоб не порушувати інкапусуляцію, бажано повертати копію посилальних типів
+        public Product Product
 		{
 			get { return _product; }
 			set { _product = value; }
 		}
 
-		public decimal TotalPrice()
-		{
-			return _product.Price * _quantity;
-		}
-
+		// TODO: Якщо конструктор приймає клас, використовувати копіювання
 		public Buy(Product product, int quantity)
 		{
 			_product = product;
 			_quantity = quantity;
 		}
 
-		public override string ToString()
+        public decimal TotalPrice()
+        {
+            return _product.Price * _quantity;
+        }
+
+        public override string ToString()
 		{
 			return $"Buy:\n" +
 				$"\t{_product},\n" +
