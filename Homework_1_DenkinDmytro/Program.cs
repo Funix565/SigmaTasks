@@ -1,7 +1,8 @@
 ﻿namespace Homework_1_DenkinDmytro
 {
     internal class Program
-    {
+    {// Вітаю Вас. Поки що бачу тільки 1 завдання.
+        // Не бачу використання класу Check.
         static void Main(string[] args)
         {
             Product p1 = new Product("Milk from brown cow", 70.99m, 900);
