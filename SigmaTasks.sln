@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_1_DenkinDmytro", "Homework_1_DenkinDmytro\Homework_1_DenkinDmytro.csproj", "{59D45E3F-80C6-4C0C-A781-E33CB199FDEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework_1_DenkinDmytro", "Homework_1_DenkinDmytro\Homework_1_DenkinDmytro.csproj", "{59D45E3F-80C6-4C0C-A781-E33CB199FDEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_2_DenkinDmytro", "Homework_2_DenkinDmytro\Homework_2_DenkinDmytro.csproj", "{978FDE7E-7A61-4CE4-8B53-08B72FE2769F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework_2_DenkinDmytro", "Homework_2_DenkinDmytro\Homework_2_DenkinDmytro.csproj", "{978FDE7E-7A61-4CE4-8B53-08B72FE2769F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework_3_DenkinDmytro", "Homework_3_DenkinDmytro\Homework_3_DenkinDmytro.csproj", "{C64A34EC-84EA-47A0-BD30-8719E48313D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{978FDE7E-7A61-4CE4-8B53-08B72FE2769F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{978FDE7E-7A61-4CE4-8B53-08B72FE2769F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{978FDE7E-7A61-4CE4-8B53-08B72FE2769F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C64A34EC-84EA-47A0-BD30-8719E48313D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C64A34EC-84EA-47A0-BD30-8719E48313D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C64A34EC-84EA-47A0-BD30-8719E48313D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C64A34EC-84EA-47A0-BD30-8719E48313D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

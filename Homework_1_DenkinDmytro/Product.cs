@@ -54,7 +54,13 @@
 			Weight = weight;
 		}
 
-		public override string ToString()
+        // Change the price by a given percent
+        public virtual void ChangePrice(decimal percent)
+        {
+            Price += Price * (percent / 100.0m);
+        }
+
+        public override string ToString()
 		{
 			return $"Product:\n" +
 				$"\tName: {_name},\n" +
