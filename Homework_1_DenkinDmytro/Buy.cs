@@ -6,27 +6,31 @@ using System.Threading.Tasks;
 
 namespace Homework_1_DenkinDmytro
 {// Покупка може містити кілька Product. Чому, коли Ви можете міняти будь-коли Product зміна кількості можлива тільки через конструктор?
+	// >> Ок. Дозволив зміну кількості. Заборонив змінювати Product будь-коли, тільки у конструкторі.
     public class Buy
     {
-		private Product _product;
+		private readonly Product _product;
 
-        // readonly -- assume that we can't change the quantity in Buy
-        private readonly int _quantity;
+        private uint _quantity;
 
-		public int Quantity
+		public uint Quantity
         {
 			get { return _quantity; }
+			set { _quantity = value; }
 		}
 
         // TODO: Щоб не порушувати інкапусуляцію, бажано повертати копію посилальних типів
+		// It is better to return a copy of the reference type to avoid nasty side effects
         public Product Product
 		{
-			get { return _product; }
-			set { _product = value; }
+			get
+			{
+				return new Product(_product.Name, _product.Price, _product.Weight);
+			}
 		}
 
-		// TODO: Якщо конструктор приймає клас, використовувати копіювання
-		public Buy(Product product, int quantity)
+		// TODO: Якщо конструктор приймає клас, використовувати копіювання?
+		public Buy(Product product, uint quantity)
 		{
 			_product = product;
 			_quantity = quantity;
@@ -44,5 +48,17 @@ namespace Homework_1_DenkinDmytro
 				$"\tQuantity: {_quantity},\n" +
 				$"\tTotal Price: {TotalPrice()}";
         }
+
+		public override bool Equals(object? obj)
+		{
+			return obj is Buy buy &&
+				   EqualityComparer<Product>.Default.Equals(_product, buy._product) &&
+				   _quantity == buy._quantity;
+		}
+
+		public override int GetHashCode()
+		{
+			return HashCode.Combine(_product, _quantity);
+		}
 	}
 }

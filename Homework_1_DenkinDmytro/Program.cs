@@ -24,6 +24,11 @@
             Console.WriteLine(b1);
             Console.WriteLine(b2);
             Console.WriteLine(b3);
+
+            // Check class using
+            Check.ProductInfo(p1);
+            Check.BuyInfo(b1);
+
         }
     }
 }

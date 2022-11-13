@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Homework_1_DenkinDmytro
+﻿namespace Homework_1_DenkinDmytro
 {
-	// TODO: Додати перевірку даних в `set` -- ціна, вага
-    public class Product
-    {
+	public class Product
+	{
 		// protected -- for future children to inherit
 		protected string _name;
 
@@ -19,13 +12,33 @@ namespace Homework_1_DenkinDmytro
 		public double Weight
 		{
 			get { return _weight; }
-			set { _weight = value; }
+			set
+			{
+				if (value > 0)
+				{
+					_weight = value;
+				}
+				else
+				{
+					throw new ArgumentException("A weight cannot be negative");
+				}
+			}
 		}
 
 		public decimal Price
 		{
 			get { return _price; }
-			set { _price = value; }
+			set
+			{
+				if (value > 0)
+				{
+					_price = value;
+				}
+				else
+				{
+					throw new ArgumentException("A price cannot be negative");
+				}
+			}
 		}
 
 		public string Name
@@ -37,16 +50,29 @@ namespace Homework_1_DenkinDmytro
 		public Product(string name, decimal price, double weight)
 		{
 			_name = name;
-			_price = price;
-			_weight = weight;
+			Price = price;
+			Weight = weight;
 		}
 
 		public override string ToString()
 		{
 			return $"Product:\n" +
-                $"\tName: {_name},\n" +
-                $"\tPrice: {_price},\n" +
-                $"\tWeight: {_weight}";
+				$"\tName: {_name},\n" +
+				$"\tPrice: {_price},\n" +
+				$"\tWeight: {_weight}";
+		}
+
+		public override bool Equals(object? obj)
+		{
+			return obj is Product product &&
+				   _name == product._name &&
+				   _price == product._price &&
+				   _weight == product._weight;
+		}
+
+		public override int GetHashCode()
+		{
+			return HashCode.Combine(_name, _price, _weight);
 		}
 	}
 }
